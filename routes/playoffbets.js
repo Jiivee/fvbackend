@@ -7,9 +7,19 @@ var mongoose = require('mongoose');
 var router = express.Router();
 //ONLY Allow access for authenticated user:
 var tokenChecker = require('../auth.js');
-router.use(tokenChecker);
+//router.use(tokenChecker);
 
 var async = require('async');
+/*
+router.get('/reset/all/teams', function(req, res, next) {
+  mongoose.model('playoffbet').find().exec(function(err, playoffbets) {
+    console.log(playoffbets.length);
+    playoffbets.map(function(bet) {
+      console.log(bet.teams);
+    })
+  })
+})
+*/
 
 
 router.get('/:userId/:tournamentId', function(req, res, next) {
@@ -31,8 +41,6 @@ router.get('/:userId/:tournamentId/:round_of/team-ids', function(req, res, next)
 })
 
 router.put('/', function(req, res, next) {
-  res.sendStatus(403);
-  /*
   var bets = req.body;
   async.each(bets, function(bet, callback) {
     console.log(bet);
@@ -51,7 +59,6 @@ router.put('/', function(req, res, next) {
     });
   });
   res.sendStatus(200);
-  */
 });
 
 module.exports = router;
