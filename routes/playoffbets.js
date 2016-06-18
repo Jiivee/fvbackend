@@ -31,8 +31,6 @@ router.get('/:userId/:tournamentId/:round_of/team-ids', function(req, res, next)
 })
 
 router.put('/', function(req, res, next) {
-  res.sendStatus(403);
-  /*
   var bets = req.body;
   async.each(bets, function(bet, callback) {
     console.log(bet);
@@ -51,7 +49,6 @@ router.put('/', function(req, res, next) {
     });
   });
   res.sendStatus(200);
-  */
 });
 
 module.exports = router;

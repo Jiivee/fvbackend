@@ -140,8 +140,6 @@ router.get('/:userId/:tournamentId', function(req, res, next) {
 })
 
 router.put('/', function(req, res, next) {
-  res.sendStatus(403);
-  /*
   var bets = req.body;
 
   console.log(bets);
@@ -163,7 +161,6 @@ router.put('/', function(req, res, next) {
     });
   });
   res.send(200);
-  */
 });
 
 module.exports = router;

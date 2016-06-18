@@ -16,8 +16,6 @@ router.get('/:userId/:tournamentId', function(req, res, next) {
 })
 
 router.put('/', function(req, res, next) {
-  res.sendStatus(403);
-  /*
   var topscorerbet = req.body;
   mongoose.model('topscorerbet').findById(topscorerbet._id, function(err, bet) {
     bet.player = topscorerbet.player;
@@ -33,7 +31,6 @@ router.put('/', function(req, res, next) {
     });
   });
   res.sendStatus(200);
-  */
 });
 
 module.exports = router;
